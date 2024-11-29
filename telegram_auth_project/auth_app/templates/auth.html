@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация через Telegram</title>
+</head>
+<body>
+    <h1>Войти через Telegram</h1>
+        <a href="https://t.me/YOUR_BOT_NAME?start={{ request.user.id }}">Войти через Telegram</a>
+    {% if request.user.is_authenticated %}
+        <h2>Добро пожаловать, {{ request.user.username }}!</h2>
+    {% endif %}
+</body>
+</html>
